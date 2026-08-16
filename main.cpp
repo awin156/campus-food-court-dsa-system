@@ -401,6 +401,7 @@ bool OrderQueue::isEmpty() {
 }
 
 // limit queue to not store more than 50 orders
+// O(1) - compares queueCount wth max queue size only
 bool OrderQueue::isFull() {
     if (queueCount >= MAX_QUEUE_SIZE)
         return true;
@@ -413,6 +414,7 @@ int OrderQueue::getQueueCount() {
 }
 
 // if order is the first order, front and rear point to same node
+// O(n) - insert directly using rear pointer without searching through list
 bool OrderQueue::enqueue(Order newOrder, CartItem cartItems[], int cartCount) {
     if (isFull()) {
         cout << "\nOrder queue is full. Cannot accept more orders right now." << endl;
@@ -452,6 +454,7 @@ Order OrderQueue::dequeue(CartItem removedItems[], int &removedItemCount) {
         return removedOrder;
     }
 
+    // O(1) - direct access to the first node using front pointer
     QueueNode *temp = front;
     removedOrder = front->data;
     removedItemCount = front->itemCount;
@@ -570,6 +573,7 @@ void OrderQueue::displayPendingOrders() {
 
         cout << string(97, '-') << endl;
 
+        // O(n) - visit each node from front to rear
         while (current != NULL) {
             pendingList[displayNumber] = current;
             displayNumber++;
@@ -699,6 +703,7 @@ void OrderQueue::displayCompletedOrders() {
 }
 
 // return next order wout removing it from the queue
+// O(1) - only read front node
 Order OrderQueue::getFrontOrder()
 {
     Order frontOrder;
@@ -770,10 +775,10 @@ private:
 public:
 
     StallCircularQueue(){
-        // start with no stalls
+	// start with no stalls
         countSTALL = 0;
 
-        // pointer does not exist yet
+	// pointer does not exist yet
         malay_Position = -1;
         chinese_Position = -1;
         western_Position = -1;
@@ -914,7 +919,7 @@ int getnextSTALLindex(string type,int current){
     int index=(current+1) % countSTALL;
 
     while (index!=current){
-        // if the landing index not the same as the cruisinetype, skip the stalls
+	// if the landing index not the same as the cruisinetype, skip the stalls
         if (stalls[index].cuisineType==type){
             return index;
         }
@@ -952,7 +957,7 @@ int eligibleSTALL(string cuisine){
     while (checkedCount<allSTALL){
         Stall &currentStall = stalls[currentIndex];
 
-        // check the stall status
+	// check the stall status
         bool isOpen = currentStall.stallStatus!="Closed";
         // check the stall capacity
         bool hasCapacity = currentStall.currentOrderCount <currentStall.capacity;
@@ -985,7 +990,7 @@ void rotationTrace(string type,int stallIndex){
     int startPosition = getPointer(type);
     int allSTALL = countSTALLSeach(type);
 
-    // if no stall on that type existed
+// if no stall on that type existed
     if (startPosition == -1||allSTALL == 0){
         cout << "\nNo stall rotation exists for "<< type<< "."<< endl;
 
@@ -1000,7 +1005,7 @@ void rotationTrace(string type,int stallIndex){
     int currentIndex = startPosition;
     int checked = 0;
 
-    // max based on how many stalls foe each cuisine
+// max based on how many stalls foe each cuisine
     while(checked<allSTALL){
 
         Stall &currentS = stalls[currentIndex];
@@ -1089,7 +1094,9 @@ bool updateSTALLS(){
         return false;
     }
 
-    file << "stallID|stallName|cuisineType|stallStatus|" << "maxCapacity|currentOrderCount|rotationPos" << endl;
+    file << "stallID|stallName|cuisineType|stallStatus|"
+         << "maxCapacity|currentOrderCount|rotationPos"
+         << endl;
 
     for (int i = 0; i < countSTALL; i++){
         file << stalls[i].stallID << "|"
@@ -1554,7 +1561,7 @@ void assignNEXT(OrderQueue &orderQueue){
         return;
     }
 
-    // preview the type without removing it
+    // Preview the front order without removing it.
     Order nextOrder = orderQueue.getFrontOrder();
 
     if (nextOrder.orderID == ""){
@@ -1572,7 +1579,10 @@ void assignNEXT(OrderQueue &orderQueue){
     int chosenS_Index =circularQueue.eligibleSTALL(nextOrder.cuisineType);
 
     if (chosenS_Index == -1){
-
+        /*
+        Display every stall in the requested cuisine so
+        the user can see whether each one is closed or full.
+        */
         cout << "\n===== "<< nextOrder.cuisineType << " Rotation Check ====="<< endl;
 
         // current index
@@ -1654,7 +1664,7 @@ void assignNEXT(OrderQueue &orderQueue){
 
     countOrder++;
 
-    // move only matching pointer
+    // Move only the matching cuisine pointer.
     circularQueue.moveNext(orderS.cuisineType,chosenS_Index);
 
     // next pointer index
@@ -1673,8 +1683,6 @@ void assignNEXT(OrderQueue &orderQueue){
     }
 }
 
-// ----- ADDITIONAL FEATURE ----
-// user can update the order status - preparing/completed
 // stall updating the assigned order status
 void updateOrderS(OrderQueue &Queue)
 {
