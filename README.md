@@ -62,6 +62,7 @@ This project therefore applies different data structures according to the requir
 ### Student Kiosk
 
 System main menu:
+
 ![System main menu](docs/screenshots/main-menu.png)
 
 The student-facing ordering workflow supports:
@@ -85,12 +86,15 @@ The student-facing ordering workflow supports:
 Pending orders are maintained using a manually implemented linked-list queue.
 
 1. Order management menu:
+
 ![Order management menu](docs/screenshots/order-management-menu.png)
 
 2. Pending order queue:
+
 ![Pending order queue](docs/screenshots/pending-order-queue.png)
 
 3. Next order details:
+
 ![Next order details](docs/screenshots/next-order-details.png)
 
 Supported operations include:
