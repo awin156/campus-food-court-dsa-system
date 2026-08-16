@@ -61,6 +61,8 @@ This project therefore applies different data structures according to the requir
 
 ### Student Kiosk
 
+![System main menu](docs/screenshots/main-menu.png)
+
 The student-facing ordering workflow supports:
 
 * Student ID input validation
@@ -80,6 +82,9 @@ The student-facing ordering workflow supports:
 ### Order Queue Management
 
 Pending orders are maintained using a manually implemented linked-list queue.
+![Order management menu](docs/screenshots/order-management-menu.png)
+![Pending order queue](docs/screenshots/pending-order-queue.png)
+![Next order details](docs/screenshots/next-order-details.png)
 
 Supported operations include:
 
