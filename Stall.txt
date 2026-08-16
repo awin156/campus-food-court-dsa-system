@@ -1,0 +1,11 @@
+stallID|stallName|cuisineType|stallStatus|maxCapacity|currentOrderCount|rotationPos
+STL01|Malay Stall A|Malay|Busy|3|2|1
+STL02|Malay Stall B|Malay|Busy|3|1|2
+STL03|Malay Stall C|Malay|Available|3|0|3
+STL04|Chinese Stall A|Chinese|Available|3|1|1
+STL05|Chinese Stall B|Chinese|Busy|3|2|2
+STL06|Chinese Stall C|Chinese|Closed|3|0|3
+STL07|Western Corner|Western|Available|2|1|1
+STL08|Indian Delights|Indian|Available|2|0|1
+STL09|Drinks and Desserts|Beverages|Available|2|1|1
+STL10|Healthy Bowl|Healthy Food|Closed|2|0|1

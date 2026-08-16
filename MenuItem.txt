@@ -1,0 +1,25 @@
+itemID|itemName|itemCategory|cuisineType|price|availability|prepTime
+MI013|Chicken Briyani|Main Meal|Indian|10|Available|15
+MI007|Wantan Mee|Main Meal|Chinese|8|Available|12
+MI019|Fresh Orange Juice|Beverage|Beverages|5|Available|5
+MI004|Curry Puff|Snack|Malay|2.5|Available|5
+MI010|Chicken Chop|Main Meal|Western|13|Available|18
+MI016|Samosa|Snack|Indian|2|Available|5
+MI022|Tuna Sandwich|Main Meal|Healthy Food|8|Unavailable|8
+MI002|Mee Goreng Mamak|Main Meal|Malay|7|Available|12
+MI006|Fried Rice|Main Meal|Chinese|7.5|Available|10
+MI009|Spaghetti Bolognese|Main Meal|Western|10.5|Available|15
+MI012|Mushroom Soup|Side Dish|Western|5.5|Available|8
+MI015|Thosai|Main Meal|Indian|3.5|Available|8
+MI018|Milo Ais|Beverage|Beverages|3.5|Available|3
+MI021|Grilled Chicken Salad|Main Meal|Healthy Food|11|Unavailable|12
+MI023|Fruit Bowl|Dessert|Healthy Food|6.5|Unavailable|5
+MI001|Nasi Lemak|Main Meal|Malay|6.5|Available|10
+MI003|Ayam Penyet|Main Meal|Malay|9.5|Available|15
+MI005|Hainanese Chicken Rice|Main Meal|Chinese|8.5|Available|12
+MI008|Spring Roll|Snack|Chinese|3.5|Sold Out|5
+MI011|Fish and Chips|Main Meal|Western|14.5|Sold Out|18
+MI014|Roti Canai|Main Meal|Indian|2.5|Available|7
+MI017|Iced Lemon Tea|Beverage|Beverages|3|Available|3
+MI020|Chocolate Cake|Dessert|Beverages|6|Available|3
+MI024|Vegetable Wrap|Main Meal|Healthy Food|9|Unavailable|10

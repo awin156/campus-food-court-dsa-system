@@ -1,0 +1,19 @@
+actionID|sessionID|studentID|orderID|itemID|actionType|previousQty|newQty|custNotes|screenName|actionDesc|actionTime
+ACT001|SES001|TP077278|NONE|NONE|Login|0|0|NONE|Login|Student started kiosk session|2026-07-20 12:00:00
+ACT002|SES001|TP077278|NONE|NONE|Browse Menu|0|0|NONE|Home Menu|Browsed Malay cuisine|2026-07-20 12:00:00
+ACT003|SES001|TP077278|NONE|MI001|Add Item|0|1|Less spicy|Item Details|Added Nasi Lemak to cart|2026-07-20 12:00:00
+ACT004|SES001|TP077278|NONE|MI001|Change Quantity|1|2|Less spicy|Shopping Cart|Changed Nasi Lemak quantity from 1 to 2|2026-07-20 12:01:00
+ACT005|SES001|TP077278|ORD1001|NONE|Checkout|0|0|NONE|Checkout|Confirmed order ORD1001|2026-07-20 12:01:00
+ACT006|SES001|TP077278|ORD1001|NONE|Logout|0|0|NONE|Order Confirmation|Student ended kiosk session|2026-07-20 12:03:00
+ACT007|SES002|TP077342|NONE|NONE|Login|0|0|NONE|Login|Student started kiosk session|2026-07-20 12:09:00
+ACT008|SES002|TP077342|NONE|NONE|Browse Menu|0|0|NONE|Home Menu|Browsed Chinese cuisine|2026-07-20 12:09:00
+ACT009|SES002|TP077342|NONE|MI005|Add Item|0|1|No cucumber|Item Details|Added Hainanese Chicken Rice to cart|2026-07-20 12:10:00
+ACT010|SES002|TP077342|ORD1004|NONE|Checkout|0|0|NONE|Checkout|Confirmed order ORD1004|2026-07-20 12:10:00
+ACT011|SES002|TP077342|ORD1004|NONE|Logout|0|0|NONE|Order Confirmation|Student ended kiosk session|2026-07-20 12:12:00
+ACT012|SES003|TP077312|NONE|NONE|Login|0|0|NONE|Login|Student started kiosk session|2026-07-20 12:20:00
+ACT013|SES003|TP077312|NONE|NONE|Browse Menu|0|0|NONE|Home Menu|Browsed Western cuisine|2026-07-20 12:20:00
+ACT014|SES003|TP077312|NONE|MI009|Add Item|0|1|No cheese|Item Details|Added Spaghetti Bolognese to cart|2026-07-20 12:21:00
+ACT015|SES003|TP077312|NONE|MI012|Add Item|0|1|Serve hot|Item Details|Added Mushroom Soup to cart|2026-07-20 12:21:00
+ACT016|SES003|TP077312|NONE|MI009|Change Quantity|1|2|No cheese|Shopping Cart|Changed Spaghetti Bolognese quantity from 1 to 2|2026-07-20 12:22:00
+ACT017|SES003|TP077312|NONE|MI012|Remove Item|1|0|Serve hot|Shopping Cart|Removed Mushroom Soup from cart|2026-07-20 12:23:00
+ACT018|SES003|TP077312|NONE|MI012|Back|0|1|Serve hot|Shopping Cart|Restored Mushroom Soup after undoing the remove action|2026-07-20 12:23:30
